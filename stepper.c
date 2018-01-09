@@ -1,3 +1,6 @@
+#include <avr/io.h>
+#include <stdlib.h>
+#include <util/delay.h>
 #include "./headers/stepper.h"
 
 #define STEPPER_CONFIG_ADDRESS DDRD
@@ -10,6 +13,7 @@
 const uint8_t STEPPER_PORTS[] = {STEPPER_PORT1, STEPPER_PORT2, 
 				STEPPER_PORT3, STEPPER_PORT4};
 const uint8_t STEPPER_BITS = (1 << STEPPER_PORT1) | (1 << STEPPER_PORT2) | (1 << STEPPER_PORT3) | (1 << STEPPER_PORT4);
+
 
 void setupStepper(void) 
 {

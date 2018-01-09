@@ -13,7 +13,9 @@
 		Code syntax
 */
 
-
+#include <avr/io.h>
+#include <stdlib.h>
+#include <util/delay.h>
 #include "./headers/infrared.h"
 
 void setupIR(void) 

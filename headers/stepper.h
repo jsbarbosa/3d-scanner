@@ -1,6 +1,5 @@
+#include <stdint.h>
 #include <avr/io.h>
-#include <stdlib.h>
-#include <util/delay.h>
 
 void step(void);
 void delay(void);
