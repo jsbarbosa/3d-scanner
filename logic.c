@@ -65,8 +65,8 @@ void start(uint16_t step, uint16_t delay)
 uint16_t getADC(uint8_t channel)
 {
 	ADMUX = (1 << REFS0);
-	if(channel)	ADMUX |= (1 << (channel - 1));
-	else;
+	channel &= 0b00000111;
+	ADMUX = (ADMUX & 0b11111000) | channel;
 	ADCSRA = (1<<ADEN)|(1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0);
 	
 	ADCSRA |= (1<<ADSC);

@@ -20,7 +20,7 @@ int main(void)
 	{
 		lcd_home();	
 		
-		step = getSteps(getADC(0));
+		step = getSteps(getADC(4));
 		delay = getDelay(getADC(1));
 		
 		snprintf(buffer, sizeof(buffer), "Waiting...\nN:%03d ms:%04d", step, delay);
